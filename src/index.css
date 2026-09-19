@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-warm-white: #F8F5F0;
+  --color-charcoal: #1C1A17;
+  --color-accent: #9B7B5A;
+  --color-warm-muted: #EBE6DE;
+  --color-warm-fg: #7A7168;
+  --color-warm-border: #D8D2C8;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-persian: 'Vazirmatn', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F8F5F0;
+  color: #1C1A17;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 0; height: 0; }
+
+/* ── Editorial Portfolio Grid ─────────────────────────── */
+.portfolio-editorial {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 100px;
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .portfolio-editorial {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 240px;
+    gap: 10px;
+  }
+  .portfolio-editorial > * {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .portfolio-editorial {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 300px;
+    gap: 8px;
+  }
+}
+
+/* ── Project Card hover ────────────────────────────────── */
+.project-card {
+  cursor: pointer;
+}
+
+.project-card-img {
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-card:hover .project-card-img {
+  transform: scale(1.04);
+}
+
+/* ── Nav responsive ───────────────────────────────────── */
+.desktop-nav { display: flex; }
+.mobile-menu-btn { display: none; }
+
+@media (max-width: 768px) {
+  .desktop-nav { display: none; }
+  .mobile-menu-btn { display: flex; }
+}
+
+/* ── Filter active indicator ──────────────────────────── */
+.filter-btn-active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #9B7B5A;
+  margin-top: 3px;
+}

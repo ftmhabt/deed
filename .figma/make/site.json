@@ -1,0 +1,10 @@
+{
+  "description": "Showcase your graphic design portfolio with a modern, minimal website that highlights your work through a gallery-first approach, blending contemporary design with subtle Iranian influences.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
