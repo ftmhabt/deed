@@ -588,7 +588,7 @@ function ProjectDetailPage({
         </div>
       </div>
 
-      {/* Hero image */}
+      {/* Hero ima ge */}
       <div className="w-full aspect-video overflow-hidden bg-warm-muted mb-2">
         <img
           src={unsplash(project.imageId, 1600, 900)}
