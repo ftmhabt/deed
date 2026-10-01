@@ -412,7 +412,7 @@ function ProjectDetailPage({
       </div>
 
       {/* Hero ima ge */}
-      <div className="w-full aspect-21/9 overflow-hidden bg-warm-muted mb-2">
+      <div className="w-full overflow-hidden bg-warm-muted mb-2">
         <img
           src={project.imagePath}
           alt={project.titleEn}
@@ -448,7 +448,7 @@ function ProjectDetailPage({
           </div>
 
           {project.detailImages[2] && (
-            <div className="col-span-2 aspect-21/9 overflow-hidden bg-warm-muted">
+            <div className="col-span-2 overflow-hidden bg-warm-muted">
               <img
                 src={project.detailImages[2]}
                 alt=""
@@ -475,7 +475,7 @@ function ProjectDetailPage({
             </>
           )}
           {project.detailImages[5] && (
-            <div className="col-span-2 aspect-21/9 overflow-hidden bg-warm-muted">
+            <div className="col-span-2 overflow-hidden bg-warm-muted">
               <img
                 src={project.detailImages[5]}
                 alt=""
@@ -502,7 +502,7 @@ function ProjectDetailPage({
             </>
           )}
           {project.detailImages[8] && (
-            <div className="col-span-2 aspect-21/9 overflow-hidden bg-warm-muted">
+            <div className="col-span-2 overflow-hidden bg-warm-muted">
               <img
                 src={project.detailImages[8]}
                 alt=""
