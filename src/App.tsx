@@ -1,181 +1,8 @@
 import { useState, type CSSProperties } from "react";
 import { ContactPage } from "./components/Contact";
+import { Category, Project, PROJECTS } from "./data/works";
 // ─── Types ────────────────────────────────────────────────────────────────────
 type Page = "home" | "project" | "about" | "contact";
-type Category =
-  | "all"
-  | "identity"
-  | "poster"
-  | "advertising"
-  | "packaging"
-  | "digital";
-
-interface Project {
-  id: string;
-  number: string;
-  title: string;
-  titleEn: string;
-  category: Category;
-  categoryLabel: string;
-  categoryLabelFa: string;
-  year: string;
-  yearEn: string;
-  imageId: string;
-  detailImages: string[];
-  description: string;
-}
-
-// ─── Data ─────────────────────────────────────────────────────────────────────
-const PROJECTS: Project[] = [
-  {
-    id: "nava",
-    number: "۰۱",
-    title: "نوا",
-    titleEn: "Nava",
-    category: "identity",
-    categoryLabel: "Visual Identity",
-    categoryLabelFa: "هویت بصری",
-    year: "۱۴۰۳",
-    yearEn: "2024",
-    imageId: "photo-1561070791-2526d30994b5",
-    detailImages: [
-      "photo-1586717799252-bd134ad00e26",
-      "photo-1609921212029-bb5a28e60960",
-      "photo-1526628953301-3cd2f49a8463",
-      "photo-1558618666-fcd25c85cd64",
-    ],
-    description:
-      "A visual identity system for Nava, a contemporary music label from Tehran. The system balances modernity with organic warmth, using a restrained palette and geometric forms to express the label's curatorial voice.",
-  },
-  {
-    id: "kashan",
-    number: "۰۲",
-    title: "کاشان",
-    titleEn: "Kashan",
-    category: "poster",
-    categoryLabel: "Posters",
-    categoryLabelFa: "پوستر",
-    year: "۱۴۰۳",
-    yearEn: "2024",
-    imageId: "photo-1586717799252-bd134ad00e26",
-    detailImages: [
-      "photo-1572044162444-ad60f128bdea",
-      "photo-1618004652321-13a63e576b80",
-      "photo-1558618666-fcd25c85cd64",
-    ],
-    description:
-      "A series of exhibition posters for the Kashan Design Festival. Each piece explores the interplay between Persian typographic proportions and the contemporary grid — restraint as a compositional act.",
-  },
-  {
-    id: "aria",
-    number: "۰۳",
-    title: "آریا",
-    titleEn: "Aria",
-    category: "packaging",
-    categoryLabel: "Packaging",
-    categoryLabelFa: "بسته‌بندی",
-    year: "۱۴۰۲",
-    yearEn: "2023",
-    imageId: "photo-1612538498456-e861df91d4d0",
-    detailImages: [
-      "photo-1594035910387-fea47794261f",
-      "photo-1526628953301-3cd2f49a8463",
-    ],
-    description:
-      "Packaging design for Aria, an artisan tea brand rooted in the gardens of Gilan. The design draws from botanical illustration traditions while maintaining a clean, shelf-forward presence that travels well across markets.",
-  },
-  {
-    id: "radin",
-    number: "۰۴",
-    title: "رادین",
-    titleEn: "Radin",
-    category: "advertising",
-    categoryLabel: "Advertising",
-    categoryLabelFa: "تبلیغات",
-    year: "۱۴۰۲",
-    yearEn: "2023",
-    imageId: "photo-1558618666-fcd25c85cd64",
-    detailImages: [
-      "photo-1561070791-2526d30994b5",
-      "photo-1618004652321-13a63e576b80",
-    ],
-    description:
-      "A campaign for Radin, a lifestyle brand. Carefully composed typography and monochromatic photography build a consistent visual language across print and digital, where every touchpoint feels considered.",
-  },
-  {
-    id: "sepand",
-    number: "۰۵",
-    title: "سپند",
-    titleEn: "Sepand",
-    category: "digital",
-    categoryLabel: "Digital",
-    categoryLabelFa: "دیجیتال",
-    year: "۱۴۰۲",
-    yearEn: "2023",
-    imageId: "photo-1618004652321-13a63e576b80",
-    detailImages: [
-      "photo-1586717799252-bd134ad00e26",
-      "photo-1609921212029-bb5a28e60960",
-    ],
-    description:
-      "Digital product design for Sepand, a financial platform. The interface prioritizes clarity and ease of use, translating complex data into an accessible and trustworthy visual experience.",
-  },
-  {
-    id: "ava",
-    number: "۰۶",
-    title: "آوا",
-    titleEn: "Ava",
-    category: "identity",
-    categoryLabel: "Visual Identity",
-    categoryLabelFa: "هویت بصری",
-    year: "۱۴۰۱",
-    yearEn: "2022",
-    imageId: "photo-1526628953301-3cd2f49a8463",
-    detailImages: [
-      "photo-1609921212029-bb5a28e60960",
-      "photo-1561070791-2526d30994b5",
-      "photo-1572044162444-ad60f128bdea",
-    ],
-    description:
-      "Brand identity for Ava, an independent publishing house. The system is built around legibility and longevity — a mark and typography that work equally well on a spine, a website, and a tote bag.",
-  },
-  {
-    id: "simorgh",
-    number: "۰۷",
-    title: "سیمرغ",
-    titleEn: "Simorgh",
-    category: "packaging",
-    categoryLabel: "Packaging",
-    categoryLabelFa: "بسته‌بندی",
-    year: "۱۴۰۱",
-    yearEn: "2022",
-    imageId: "photo-1572044162444-ad60f128bdea",
-    detailImages: [
-      "photo-1594035910387-fea47794261f",
-      "photo-1612538498456-e861df91d4d0",
-    ],
-    description:
-      "Packaging for Simorgh, a premium saffron label. The visual language references the geometric precision of Iranian craft through a contemporary lens — without direct quotation, without nostalgia.",
-  },
-  {
-    id: "parisa",
-    number: "۰۸",
-    title: "پریسا",
-    titleEn: "Parisa",
-    category: "poster",
-    categoryLabel: "Posters",
-    categoryLabelFa: "پوستر",
-    year: "۱۴۰۱",
-    yearEn: "2022",
-    imageId: "photo-1609921212029-bb5a28e60960",
-    detailImages: [
-      "photo-1558618666-fcd25c85cd64",
-      "photo-1586717799252-bd134ad00e26",
-    ],
-    description:
-      "A poster series for Parisa, a theatre production company. Each poster for the season is a distinct composition sharing a common visual grammar — structured around a precise typographic system that makes space for image and absence equally.",
-  },
-];
 
 const FILTERS: { id: Category; en: string; fa: string }[] = [
   { id: "all", en: "All", fa: "همه" },
@@ -197,10 +24,6 @@ const EDITORIAL: CSSProperties[] = [
   { gridColumn: "9 / 13", gridRow: "5 / 8" }, // small
   { gridColumn: "1 / 13", gridRow: "8 / 10" }, // full-width banner
 ];
-
-function unsplash(id: string, w: number, h: number) {
-  return `https://images.unsplash.com/${id}?w=${w}&h=${h}&fit=crop&auto=format`;
-}
 
 // ─── Logo ─────────────────────────────────────────────────────────────────────
 function EyeMark({ size = 18 }: { size?: number }) {
@@ -372,7 +195,7 @@ function ProjectCard({
     >
       <div className="overflow-hidden flex-1 relative bg-warm-muted">
         <img
-          src={unsplash(project.imageId, wide ? 1600 : 800, wide ? 460 : 800)}
+          src={project.imagePath}
           alt={project.titleEn}
           className="project-card-img w-full h-full object-cover"
           loading="lazy"
@@ -438,7 +261,7 @@ function PortfolioGrid({
         >
           <div className="overflow-hidden aspect-[4/3] bg-warm-muted">
             <img
-              src={unsplash(project.imageId, 800, 600)}
+              src={project.imagePath}
               alt={project.titleEn}
               className="project-card-img w-full h-full object-cover"
               loading="lazy"
@@ -591,7 +414,7 @@ function ProjectDetailPage({
       {/* Hero ima ge */}
       <div className="w-full aspect-video overflow-hidden bg-warm-muted mb-2">
         <img
-          src={unsplash(project.imageId, 1600, 900)}
+          src={project.imagePath}
           alt={project.titleEn}
           className="w-full h-full object-cover"
         />
@@ -611,7 +434,7 @@ function ProjectDetailPage({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-2">
           <div className="aspect-square overflow-hidden bg-warm-muted">
             <img
-              src={unsplash(project.detailImages[0], 800, 800)}
+              src={project.detailImages[0]}
               alt=""
               className="w-full h-full object-cover"
             />
@@ -619,7 +442,7 @@ function ProjectDetailPage({
           <div className="flex flex-col gap-2">
             <div className="flex-1 overflow-hidden bg-warm-muted">
               <img
-                src={unsplash(project.detailImages[1], 800, 400)}
+                src={project.detailImages[1]}
                 alt=""
                 className="w-full h-full object-cover"
               />
@@ -627,7 +450,7 @@ function ProjectDetailPage({
             {project.detailImages[2] && (
               <div className="flex-1 overflow-hidden bg-warm-muted">
                 <img
-                  src={unsplash(project.detailImages[2], 800, 400)}
+                  src={project.detailImages[2]}
                   alt=""
                   className="w-full h-full object-cover"
                 />
@@ -640,7 +463,7 @@ function ProjectDetailPage({
       {project.detailImages.length >= 4 && (
         <div className="w-full aspect-[21/9] overflow-hidden bg-warm-muted mb-16">
           <img
-            src={unsplash(project.detailImages[3], 1600, 700)}
+            src={project.detailImages[3]}
             alt=""
             className="w-full h-full object-cover"
           />
@@ -651,11 +474,7 @@ function ProjectDetailPage({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-16">
           {project.detailImages.map((id, i) => (
             <div key={i} className="aspect-[4/3] overflow-hidden bg-warm-muted">
-              <img
-                src={unsplash(id, 800, 600)}
-                alt=""
-                className="w-full h-full object-cover"
-              />
+              <img src={id} alt="" className="w-full h-full object-cover" />
             </div>
           ))}
         </div>
@@ -797,7 +616,7 @@ function AboutPage({ navigate }: { navigate: (p: Page) => void }) {
             style={{ height: "340px" }}
           >
             <img
-              src={unsplash("photo-1524758631624-e2822e304c36", 800, 700)}
+              src={"photo-1524758631624-e2822e304c36"}
               alt="Did studio"
               className="w-full h-full object-cover"
             />
@@ -805,14 +624,14 @@ function AboutPage({ navigate }: { navigate: (p: Page) => void }) {
           <div className="grid grid-cols-2 gap-2">
             <div className="aspect-square overflow-hidden bg-warm-muted">
               <img
-                src={unsplash("photo-1541963463532-d68292c34b19", 500, 500)}
+                src={"photo-1541963463532-d68292c34b19"}
                 alt="Studio process"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="aspect-square overflow-hidden bg-warm-muted">
               <img
-                src={unsplash("photo-1561070791-2526d30994b5", 500, 500)}
+                src={"photo-1561070791-2526d30994b5"}
                 alt="Design work"
                 className="w-full h-full object-cover"
               />
