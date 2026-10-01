@@ -84,7 +84,7 @@ function Nav({
             >
               <EyeMark />
               <span className="font-sans font-medium text-sm tracking-tight text-charcoal">
-                Did
+                Deed
               </span>
               <span className="text-warm-border text-xs select-none">·</span>
               <span className="font-persian font-normal text-sm text-charcoal">
@@ -542,7 +542,7 @@ function AboutPage({ navigate }: { navigate: (p: Page) => void }) {
 
           <div className="space-y-5 mb-10">
             <p className="text-[15px] leading-relaxed text-charcoal">
-              Did is an independent graphic design studio. We work with
+              Deed is an independent graphic design studio. We work with
               founders, cultural institutions, and makers who believe that good
               design is not decoration — it is thinking made visible.
             </p>
@@ -617,7 +617,7 @@ function AboutPage({ navigate }: { navigate: (p: Page) => void }) {
           >
             <img
               src={"photo-1524758631624-e2822e304c36"}
-              alt="Did studio"
+              alt="Deed studio"
               className="w-full h-full object-cover"
             />
           </div>
@@ -654,7 +654,7 @@ function Footer({ navigate }: { navigate: (p: Page) => void }) {
         >
           <EyeMark size={14} />
           <span className="text-[13px] text-warm-fg group-hover:text-charcoal transition-colors font-sans">
-            Did
+            Deed
           </span>
           <span className="text-warm-border text-xs">·</span>
           <span className="font-persian text-[13px] text-warm-fg group-hover:text-charcoal transition-colors">
@@ -664,10 +664,10 @@ function Footer({ navigate }: { navigate: (p: Page) => void }) {
         <div className="flex items-center gap-6">
           <span className="font-mono text-[11px] text-warm-fg/50">©۱۴۰۳</span>
           <a
-            href="mailto:hello@did.studio"
+            href="mailto:hello@deed.studio"
             className="text-[12px] text-warm-fg hover:text-charcoal transition-colors"
           >
-            hello@did.studio
+            hello@deed.studio
           </a>
           <a
             href="#"
@@ -690,7 +690,7 @@ function Footer({ navigate }: { navigate: (p: Page) => void }) {
 // ─── App ──────────────────────────────────────────────────────────────────────
 export default function App() {
   const [page, setPage] = useState<Page>("home");
-  const [selectedId, setSelectedId] = useState("");
+  const [selectedeed, setSelectedeed] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeFilter, setActiveFilter] = useState<Category>("all");
   const [visible, setVisible] = useState(true);
@@ -699,14 +699,14 @@ export default function App() {
     setVisible(false);
     setTimeout(() => {
       setPage(newPage);
-      if (projectId) setSelectedId(projectId);
+      if (projectId) setSelectedeed(projectId);
       setMenuOpen(false);
       window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
       setVisible(true);
     }, 220);
   }
 
-  const project = PROJECTS.find((p) => p.id === selectedId);
+  const project = PROJECTS.find((p) => p.id === selectedeed);
 
   return (
     <div
