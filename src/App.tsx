@@ -1,6 +1,7 @@
 import { useState, type CSSProperties } from "react";
 import { ContactPage } from "./components/Contact";
 import { Category, Project, PROJECTS } from "./data/works";
+import { getImage } from "./utils/gallery";
 // ─── Types ────────────────────────────────────────────────────────────────────
 type Page = "home" | "project" | "about" | "contact";
 
@@ -195,7 +196,7 @@ function ProjectCard({
     >
       <div className="overflow-hidden flex-1 relative bg-warm-muted">
         <img
-          src={project.imagePath}
+          src={getImage(project.imagePath, "thumb")}
           alt={project.titleEn}
           className="project-card-img w-full h-full object-cover"
           loading="lazy"
@@ -261,7 +262,7 @@ function PortfolioGrid({
         >
           <div className="overflow-hidden aspect-[4/3] bg-warm-muted">
             <img
-              src={project.imagePath}
+              src={getImage(project.imagePath, "large")}
               alt={project.titleEn}
               className="project-card-img w-full h-full object-cover"
               loading="lazy"
@@ -414,7 +415,7 @@ function ProjectDetailPage({
       {/* Hero ima ge */}
       <div className="w-full overflow-hidden bg-warm-muted mb-2">
         <img
-          src={project.imagePath}
+          src={getImage(project.imagePath, "large")}
           alt={project.titleEn}
           className="w-full h-full object-cover"
         />
@@ -434,14 +435,14 @@ function ProjectDetailPage({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-2">
           <div className="flex-1 overflow-hidden bg-warm-muted">
             <img
-              src={project.detailImages[0]}
+              src={getImage(project.detailImages[0], "large")}
               alt=""
               className="w-full h-full object-cover"
             />
           </div>
           <div className="flex-1 overflow-hidden bg-warm-muted">
             <img
-              src={project.detailImages[1]}
+              src={getImage(project.detailImages[1], "large")}
               alt=""
               className="w-full h-full object-cover"
             />
@@ -450,7 +451,7 @@ function ProjectDetailPage({
           {project.detailImages[2] && (
             <div className="col-span-2 overflow-hidden bg-warm-muted">
               <img
-                src={project.detailImages[2]}
+                src={getImage(project.detailImages[2], "large")}
                 alt=""
                 className="w-full h-full object-cover"
               />
@@ -460,14 +461,14 @@ function ProjectDetailPage({
             <>
               <div className="flex-1 overflow-hidden bg-warm-muted">
                 <img
-                  src={project.detailImages[3]}
+                  src={getImage(project.detailImages[3], "large")}
                   alt=""
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="flex-1 overflow-hidden bg-warm-muted">
                 <img
-                  src={project.detailImages[4]}
+                  src={getImage(project.detailImages[4], "large")}
                   alt=""
                   className="w-full h-full object-cover"
                 />
@@ -477,7 +478,7 @@ function ProjectDetailPage({
           {project.detailImages[5] && (
             <div className="col-span-2 overflow-hidden bg-warm-muted">
               <img
-                src={project.detailImages[5]}
+                src={getImage(project.detailImages[5], "large")}
                 alt=""
                 className="w-full h-full object-cover"
               />
@@ -487,14 +488,14 @@ function ProjectDetailPage({
             <>
               <div className="flex-1 overflow-hidden bg-warm-muted">
                 <img
-                  src={project.detailImages[6]}
+                  src={getImage(project.detailImages[6], "large")}
                   alt=""
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="flex-1 overflow-hidden bg-warm-muted">
                 <img
-                  src={project.detailImages[7]}
+                  src={getImage(project.detailImages[7], "large")}
                   alt=""
                   className="w-full h-full object-cover"
                 />
@@ -504,7 +505,7 @@ function ProjectDetailPage({
           {project.detailImages[8] && (
             <div className="col-span-2 overflow-hidden bg-warm-muted">
               <img
-                src={project.detailImages[8]}
+                src={getImage(project.detailImages[8], "large")}
                 alt=""
                 className="w-full h-full object-cover"
               />
