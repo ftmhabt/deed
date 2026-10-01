@@ -380,7 +380,7 @@ function ProjectDetailPage({
             <span className="font-mono text-[11px] text-warm-fg">
               {project.number}
             </span>
-            <span className="block flex-1 max-w-[48px] h-px bg-warm-border" />
+            <span className="block flex-1 max-w-12 h-px bg-warm-border" />
           </div>
           <h1 className="font-persian text-6xl sm:text-8xl font-medium text-charcoal leading-none mb-3">
             {project.title}
@@ -412,7 +412,7 @@ function ProjectDetailPage({
       </div>
 
       {/* Hero ima ge */}
-      <div className="w-full aspect-video overflow-hidden bg-warm-muted mb-2">
+      <div className="w-full aspect-21/9 overflow-hidden bg-warm-muted mb-2">
         <img
           src={project.imagePath}
           alt={project.titleEn}
@@ -432,51 +432,84 @@ function ProjectDetailPage({
       {/* Detail images */}
       {project.detailImages.length >= 3 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-2">
-          <div className="aspect-square overflow-hidden bg-warm-muted">
+          <div className="flex-1 overflow-hidden bg-warm-muted">
             <img
               src={project.detailImages[0]}
               alt=""
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="flex flex-col gap-2">
-            <div className="flex-1 overflow-hidden bg-warm-muted">
+          <div className="flex-1 overflow-hidden bg-warm-muted">
+            <img
+              src={project.detailImages[1]}
+              alt=""
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {project.detailImages[2] && (
+            <div className="col-span-2 aspect-21/9 overflow-hidden bg-warm-muted">
               <img
-                src={project.detailImages[1]}
+                src={project.detailImages[2]}
                 alt=""
                 className="w-full h-full object-cover"
               />
             </div>
-            {project.detailImages[2] && (
+          )}
+          {project.detailImages[3] && project.detailImages[4] && (
+            <>
               <div className="flex-1 overflow-hidden bg-warm-muted">
                 <img
-                  src={project.detailImages[2]}
+                  src={project.detailImages[3]}
                   alt=""
                   className="w-full h-full object-cover"
                 />
               </div>
-            )}
-          </div>
-        </div>
-      )}
-
-      {project.detailImages.length >= 4 && (
-        <div className="w-full aspect-[21/9] overflow-hidden bg-warm-muted mb-16">
-          <img
-            src={project.detailImages[3]}
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div>
-      )}
-
-      {project.detailImages.length === 2 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-16">
-          {project.detailImages.map((id, i) => (
-            <div key={i} className="aspect-[4/3] overflow-hidden bg-warm-muted">
-              <img src={id} alt="" className="w-full h-full object-cover" />
+              <div className="flex-1 overflow-hidden bg-warm-muted">
+                <img
+                  src={project.detailImages[4]}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </>
+          )}
+          {project.detailImages[5] && (
+            <div className="col-span-2 aspect-21/9 overflow-hidden bg-warm-muted">
+              <img
+                src={project.detailImages[5]}
+                alt=""
+                className="w-full h-full object-cover"
+              />
             </div>
-          ))}
+          )}
+          {project.detailImages[6] && project.detailImages[7] && (
+            <>
+              <div className="flex-1 overflow-hidden bg-warm-muted">
+                <img
+                  src={project.detailImages[6]}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex-1 overflow-hidden bg-warm-muted">
+                <img
+                  src={project.detailImages[7]}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </>
+          )}
+          {project.detailImages[8] && (
+            <div className="col-span-2 aspect-21/9 overflow-hidden bg-warm-muted">
+              <img
+                src={project.detailImages[8]}
+                alt=""
+                className="w-full h-full object-cover"
+              />
+            </div>
+          )}
         </div>
       )}
 
