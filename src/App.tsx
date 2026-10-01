@@ -207,7 +207,7 @@ function ProjectCard({
           <span className="font-mono text-[10px] text-warm-fg shrink-0">
             {project.number}
           </span>
-          <span className="text-[13px] font-medium text-charcoal truncate">
+          <span className="text-[13px] font-medium text-charcoal truncate font-persian-regular">
             {project.title}
           </span>
           <span className="font-sans text-[12px] text-warm-fg truncate hidden sm:block">
@@ -273,7 +273,7 @@ function PortfolioGrid({
               <span className="font-mono text-[10px] text-warm-fg">
                 {project.number}
               </span>
-              <span className="text-[13px] font-medium text-charcoal">
+              <span className="text-[13px] font-medium text-charcoal font-persian-regular">
                 {project.title}
               </span>
               <span className="text-[12px] text-warm-fg">
@@ -424,7 +424,7 @@ function ProjectDetailPage({
       {/* Description */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-14 mb-16">
         <div className="sm:col-span-2">
-          <p className="text-[16px] leading-[1.75] text-charcoal">
+          <p className="text-[16px] leading-[1.75] text-charcoal font-persian-regular">
             {project.description}
           </p>
         </div>

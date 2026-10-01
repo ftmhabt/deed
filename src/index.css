@@ -1,18 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&display=swap');
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&display=swap");
+@import "tailwindcss";
 
+@font-face {
+  font-family: "Kalameh";
+  src: url("./assets/fonts/KalamehFaNum-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Peyda";
+  src: url("./assets/fonts/PeydaFaNum-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 @theme {
-  --color-warm-white: #F8F5F0;
-  --color-charcoal: #1C1A17;
-  --color-accent: #9B7B5A;
-  --color-warm-muted: #EBE6DE;
-  --color-warm-fg: #7A7168;
-  --color-warm-border: #D8D2C8;
-  --font-sans: 'DM Sans', sans-serif;
-  --font-persian: 'Vazirmatn', sans-serif;
-  --font-mono: 'DM Mono', monospace;
+  --color-warm-white: #f8f5f0;
+  --color-charcoal: #1c1a17;
+  --color-accent: #9b7b5a;
+  --color-warm-muted: #ebe6de;
+  --color-warm-fg: #7a7168;
+  --color-warm-border: #d8d2c8;
+  --font-sans: "DM Sans", sans-serif;
+  --font-persian: "Vazirmatn", sans-serif;
+  --font-persian-regular: "Peyda", sans-serif;
+  --font-mono: "DM Mono", monospace;
 }
 
 html {
@@ -20,13 +36,16 @@ html {
 }
 
 body {
-  background-color: #F8F5F0;
-  color: #1C1A17;
+  background-color: #f8f5f0;
+  color: #1c1a17;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-::-webkit-scrollbar { width: 0; height: 0; }
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 
 /* ── Editorial Portfolio Grid ─────────────────────────── */
 .portfolio-editorial {
@@ -70,20 +89,28 @@ body {
 }
 
 /* ── Nav responsive ───────────────────────────────────── */
-.desktop-nav { display: flex; }
-.mobile-menu-btn { display: none; }
+.desktop-nav {
+  display: flex;
+}
+.mobile-menu-btn {
+  display: none;
+}
 
 @media (max-width: 768px) {
-  .desktop-nav { display: none; }
-  .mobile-menu-btn { display: flex; }
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: flex;
+  }
 }
 
 /* ── Filter active indicator ──────────────────────────── */
 .filter-btn-active::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 1px;
-  background-color: #9B7B5A;
+  background-color: #9b7b5a;
   margin-top: 3px;
 }
