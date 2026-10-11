@@ -26,6 +26,7 @@ const EDITORIAL: CSSProperties[] = [
   { gridColumn: "1 / 13", gridRow: "8 / 10" }, // full-width banner
 ];
 
+const BASE = import.meta.env.BASE_URL;
 // ─── Logo ─────────────────────────────────────────────────────────────────────
 function EyeMark({ size = 18 }: { size?: number }) {
   const h = Math.round(size * 0.72);
@@ -83,14 +84,7 @@ function Nav({
               onClick={() => navigate("home")}
               className="flex items-center gap-3 group cursor-pointer"
             >
-              <EyeMark />
-              <span className="font-sans font-medium text-sm tracking-tight text-charcoal">
-                Deed
-              </span>
-              <span className="text-warm-border text-xs select-none">·</span>
-              <span className="font-persian font-normal text-sm text-charcoal">
-                دید
-              </span>
+              <img src={`${BASE}images/logo.png`} width={86} />
             </button>
 
             {/* Desktop links */}
