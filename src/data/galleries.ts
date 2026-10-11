@@ -65,4 +65,43 @@ export const GALLERIES: Gallery[] = [
       (_, i) => `Rasta_${String(i + 1).padStart(2, "0")}.avif`,
     ),
   },
+
+  {
+    id: "bubblex",
+    title: "بابل اکس",
+    folder: "bubblex",
+    images: Array.from(
+      { length: 10 },
+      (_, i) => `bubblex_${String(i + 1).padStart(2, "0")}.avif`,
+    ),
+  },
+
+  {
+    id: "neophone",
+    title: "نئوفون",
+    folder: "neophone",
+    images: Array.from(
+      { length: 10 },
+      (_, i) => `neophone_${String(i + 1).padStart(2, "0")}.avif`,
+    ),
+  },
+
+  {
+    id: "skilla",
+    title: "اسکیلا",
+    folder: "skilla",
+    images: Array.from(
+      { length: 10 },
+      (_, i) => `skilla_${String(i + 1).padStart(2, "0")}.avif`,
+    ),
+  },
+  {
+    id: "falnik",
+    title: "فالنیک",
+    folder: "falnik",
+    images: Array.from(
+      { length: 10 },
+      (_, i) => `falnik_${String(i + 1).padStart(2, "0")}.avif`,
+    ),
+  },
 ];
