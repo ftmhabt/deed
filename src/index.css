@@ -18,6 +18,15 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Iran";
+  src: url("./assets/fonts/IRANSansXFaNum-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-warm-white: #f8f5f0;
   --color-charcoal: #1c1a17;
@@ -26,8 +35,8 @@
   --color-warm-fg: #7a7168;
   --color-warm-border: #d8d2c8;
   --font-sans: "DM Sans", sans-serif;
-  --font-persian: "Vazirmatn", sans-serif;
-  --font-persian-regular: "Peyda", sans-serif;
+  --font-persian: "Iran", sans-serif;
+  --font-persian-regular: "Iran", sans-serif;
   --font-mono: "DM Mono", monospace;
 }
 
