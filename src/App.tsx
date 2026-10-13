@@ -84,7 +84,10 @@ function Nav({
               onClick={() => navigate("home")}
               className="flex items-center gap-3 group cursor-pointer"
             >
-              <img src={`${BASE}images/logo.png`} width={86} />
+              <img
+                src={`https://s101.picofile.com/d/4TS1FGDGG1Or44nMgkWcJMetL8UJjbIiaj9bbyhe83Y6mW4wJusAItuGb1z1FAndJcZopnbzStySvo-Z/logo.png`}
+                width={86}
+              />
             </button>
 
             {/* Desktop links */}
@@ -580,15 +583,32 @@ function AboutPage({ navigate }: { navigate: (p: Page) => void }) {
               one gets the attention it deserves.
             </p>
             <p className="font-persian text-[14px] leading-[2] text-warm-fg mt-4">
-              دید یک استودیوی طراحی مستقل است. با بنیان‌گذاران، نهادهای فرهنگی و
-              سازندگانی کار می‌کنیم که معتقدند طراحی خوب تزئین نیست — بلکه تفکری
-              است که دیده می‌شود.
+              استودیو دید، یک استودیوی فعال در حوزه طراحی گرافیک است. ما در
+              زمینه طراحی هویت بصری، لوگو، پوستر و سایر خدمات گرافیکی فعالیت
+              می‌کنیم.
+            </p>
+            <p className="font-persian text-[14px] leading-[2] text-warm-fg mt-4">
+              ما در استودیو دید ، سعی می‌کنیم هر پروژه را متناسب با نیازش پیش
+              ببریم و برای رسیدن به نتیجه، به جزئیات توجه کنیم.
+            </p>
+            <p className="font-persian text-[14px] leading-[2] text-warm-fg mt-4">
+              ما اینجاییم تا شما بهتر دیده شوید...
             </p>
           </div>
 
           <div className="border-t border-warm-border pt-8 mb-8">
             <p className="text-[10px] text-warm-fg uppercase tracking-widest mb-3">
               Based in
+            </p>
+            <p className="text-[14px] text-charcoal">Tehran, Iran</p>
+            <p className="font-persian text-[12px] text-warm-fg mt-0.5">
+              تهران، ایران
+            </p>
+          </div>
+
+          <div className="border-t border-warm-border pt-8 mb-8">
+            <p className="text-[10px] text-warm-fg uppercase tracking-widest mb-3">
+              Telegram
             </p>
             <p className="text-[14px] text-charcoal">Tehran, Iran</p>
             <p className="font-persian text-[12px] text-warm-fg mt-0.5">
