@@ -66,11 +66,11 @@ export function ContactPage() {
             {[
               {
                 label: "Email",
-                value: "hello@deed.studio",
-                href: "mailto:hello@deed.studio",
+                value: "Moharrami.designer@gmail.com",
+                href: "mailto:Moharrami.designer@gmail.com",
               },
-              { label: "Instagram", value: "@deed.studio", href: "#" },
-              { label: "Telegram", value: "@deedstudio", href: "#" },
+              { label: ".Phone No", value: "09103226534", href: "#" },
+              { label: "Telegram", value: "Deed_Studio@", href: "#" },
             ].map(({ label, value, href }) => (
               <div key={label}>
                 <p className="text-[10px] text-warm-fg uppercase tracking-widest mb-1.5">

@@ -85,7 +85,7 @@ function Nav({
               className="flex items-center gap-3 group cursor-pointer"
             >
               <img
-                src={`https://s101.picofile.com/d/4TS1FGDGG1Or44nMgkWcJMetL8UJjbIiaj9bbyhe83Y6mW4wJusAItuGb1z1FAndJcZopnbzStySvo-Z/logo.png`}
+                src={`https://www.picofile.com/f/LHjIkRdbDJ/logo.png`}
                 width={86}
               />
             </button>
@@ -599,16 +599,6 @@ function AboutPage({ navigate }: { navigate: (p: Page) => void }) {
           <div className="border-t border-warm-border pt-8 mb-8">
             <p className="text-[10px] text-warm-fg uppercase tracking-widest mb-3">
               Based in
-            </p>
-            <p className="text-[14px] text-charcoal">Tehran, Iran</p>
-            <p className="font-persian text-[12px] text-warm-fg mt-0.5">
-              تهران، ایران
-            </p>
-          </div>
-
-          <div className="border-t border-warm-border pt-8 mb-8">
-            <p className="text-[10px] text-warm-fg uppercase tracking-widest mb-3">
-              Telegram
             </p>
             <p className="text-[14px] text-charcoal">Tehran, Iran</p>
             <p className="font-persian text-[12px] text-warm-fg mt-0.5">
