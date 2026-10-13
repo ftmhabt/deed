@@ -84,10 +84,7 @@ function Nav({
               onClick={() => navigate("home")}
               className="flex items-center gap-3 group cursor-pointer"
             >
-              <img
-                src={`https://www.picofile.com/f/LHjIkRdbDJ/logo.png`}
-                width={86}
-              />
+              <img src={`https://iili.io/nXqVTUg.md.png`} width={86} />
             </button>
 
             {/* Desktop links */}
