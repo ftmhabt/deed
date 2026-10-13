@@ -6,7 +6,7 @@ import { defineConfig } from "vite";
 // Standard Vite Config for React + Tailwind v4
 export default defineConfig({
   // Relative base path guarantees assets load properly on GitHub Pages
-  base: "./",
+  base: "/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
