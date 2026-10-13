@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap");
 @import "tailwindcss";
 
 @font-face {
@@ -35,8 +36,8 @@
   --color-warm-fg: #7a7168;
   --color-warm-border: #d8d2c8;
   --font-sans: "DM Sans", sans-serif;
-  --font-persian: "Iran", sans-serif;
-  --font-persian-regular: "Iran", sans-serif;
+  --font-persian: "Noto Sans Arabic", sans-serif;
+  --font-persian-regular: "Noto Sans Arabic", sans-serif;
   --font-mono: "DM Mono", monospace;
 }
 
