@@ -600,9 +600,9 @@ function AboutPage({ navigate }: { navigate: (p: Page) => void }) {
             <p className="text-[10px] text-warm-fg uppercase tracking-widest mb-3">
               Based in
             </p>
-            <p className="text-[14px] text-charcoal">Tehran, Iran</p>
+            <p className="text-[14px] text-charcoal">Qom, Iran</p>
             <p className="font-persian text-[12px] text-warm-fg mt-0.5">
-              تهران، ایران
+              قم، ایران
             </p>
           </div>
 
@@ -653,26 +653,26 @@ function AboutPage({ navigate }: { navigate: (p: Page) => void }) {
             className="overflow-hidden bg-warm-muted"
             style={{ height: "340px" }}
           >
-            <img
+            {/* <img
               src={"photo-1524758631624-e2822e304c36"}
               alt="Deed studio"
               className="w-full h-full object-cover"
-            />
+            /> */}
           </div>
           <div className="grid grid-cols-2 gap-2">
             <div className="aspect-square overflow-hidden bg-warm-muted">
-              <img
+              {/* <img
                 src={"photo-1541963463532-d68292c34b19"}
                 alt="Studio process"
                 className="w-full h-full object-cover"
-              />
+              /> */}
             </div>
             <div className="aspect-square overflow-hidden bg-warm-muted">
-              <img
+              {/* <img
                 src={"photo-1561070791-2526d30994b5"}
                 alt="Design work"
                 className="w-full h-full object-cover"
-              />
+              /> */}
             </div>
           </div>
         </div>
